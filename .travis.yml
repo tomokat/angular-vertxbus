@@ -16,7 +16,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 after_script:
-  - if [ "$TEST_SCOPE" == "" ]; then cat build/coverage/report/lcov.info | codeclimate; fi
+  - if [ "$TEST_SCOPE" == "" ]; then cat build/coverage/report/lcov.info | codeclimate; echo "done"; fi
 
 env:
   - TEST_SCOPE=
